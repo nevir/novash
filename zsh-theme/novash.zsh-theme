@@ -97,6 +97,11 @@ prompt_novash_left() {
   segment_host
   segment_path
   segment_vcs
+  
+  if type iterm2_prompt_mark >/dev/null; then
+    echo -n "%{$(iterm2_prompt_mark)%}"
+  fi
+
   print_segments left
 }
 
